@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="#">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hustle | Striking</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Orbitron&family=Spartan:wght@300&display=swap"
+    rel="stylesheet">
+
+  
+
+  <script type="text/javascript">
+          var user = '{{request.user}}'
+
+          function getToken(name) {
+              var cookieValue = null;
+              if (document.cookie && document.cookie !== '') {
+                  var cookies = document.cookie.split(';');
+                  for (var i = 0; i < cookies.length; i++) {
+                      var cookie = cookies[i].trim();
+                      // Does this cookie string begin with the name we want?
+                      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                          break;
+                      }
+                  }
+              }
+              return cookieValue;
+          }
+          var csrftoken = getToken('csrftoken')
+
+          function getCookie(name) {
+              // Split cookie string and get all individual name=value pairs in an array
+              var cookieArr = document.cookie.split(";");
+
+              // Loop through the array elements
+              for(var i = 0; i < cookieArr.length; i++) {
+                  var cookiePair = cookieArr[i].split("=");
+
+                  /* Removing whitespace at the beginning of the cookie name
+                  and compare it with the given string */
+                  if(name == cookiePair[0].trim()) {
+                      // Decode the cookie value and return
+                      return decodeURIComponent(cookiePair[1]);
+                  }
+              }
+
+              // Return null if not found
+              return null;
+          }
+          var cart = JSON.parse(getCookie('cart'))
+
+          if (cart == undefined){
+            cart = {}
+            console.log('Cart Created!', cart)
+            document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+          }
+          console.log('Cart:', cart)
+  
+  </script>
+</head>
+
+<body>
+  <nav class="navbar nav-border navbar-expand-lg navbar-dark bg-dark">
+    <a class="" href="{% url 'home' %}"><img id="logo" src="{% static 'images/hs_logo.png' %}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse ml-lg navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav d-flex justify-content-center mr-auto">
+
+       
+        
+        <li class="nav-item active">
+          <a class="nav-link ml-md link-flash" href="{% url 'schedule' %}"> Schedule  <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link ml-md link-flash" href="{% url 'store' %}">Membership Options <span class="sr-only">(current)</span></a>
+        </li>
+        
+
+        <li class="nav-item active">
+          <a class="nav-link ml-md link-flash" href="{% url 'location' %}">Contact Us<span class="sr-only">(current)</span></a>
+        </li>
+        
+        
+        <div class="dropdown">
+          <li class="nav-item active">
+            <a class="nav-link ml-md link-flash" href="#">Social Media <span class="sr-only">(current)</span></a>
+          </li>
+          <div class="dropdown-content">
+            <a target="_blank" href="https://www.instagram.com/hustlestriking/">Instagram</a>
+            <a target="_blank" href="https://www.facebook.com/Hustle-Striking-102383601844209/photos/">Facebook</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC0NdE4rHN65QUTN5FeJQSmg">YouTube</a>
+           
+          </div>
+        </div>
+
+
+       
+
+
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <!-- <a href="#" class="btn btn-outline-danger">Login</a> -->
+
+
+
+        <a href="{% url 'cart' %}">
+          <img id="cart-icon" src="{% static 'images/cart.png' %}">
+        </a>
+        <p id="cart-total">{{cartItems}}</p>
+
+      </div>
+    </div>
+  </nav>
+
+ 
+
+  <div class="container">{% block content %}   {% endblock content %}</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="{% static 'js/cart.js' %}">
+
+
+  </script>
+</body>
+
+</html>
