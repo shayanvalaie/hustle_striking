@@ -1,4 +1,4 @@
-{% extends 'store/main.html' %}
+r{% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
 <div class="p-5 row">
@@ -17,10 +17,10 @@
 					<th>
 						<h5>Total:<strong> ${{order.get_cart_total|floatformat:2}}</strong></h5>
 					</th>
-					<th>
-						<a style="float:right; margin:5px;" class="btn btn-outline-danger"
+					<tr>
+						<a class="btn btn-outline-danger"
 							href="{% url 'checkout' %}">Checkout</a>
-					</th>
+					</tr>
 				</tr>
 			</table>
 
