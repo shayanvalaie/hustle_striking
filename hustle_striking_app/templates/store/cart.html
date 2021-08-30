@@ -17,10 +17,9 @@ r{% extends 'store/main.html' %}
 					<th>
 						<h5>Total:<strong> ${{order.get_cart_total|floatformat:2}}</strong></h5>
 					</th>
-					<tr>
-						<a class="btn btn-outline-danger"
-							href="{% url 'checkout' %}">Checkout</a>
-					</tr>
+				<tr>
+					<a class="btn btn-outline-danger" href="{% url 'checkout' %}">Checkout</a>
+				</tr>
 				</tr>
 			</table>
 
@@ -29,7 +28,7 @@ r{% extends 'store/main.html' %}
 		<br>
 		<div class="box-element">
 			<div class="cart-row">
-				
+
 				<div style="flex:2"><strong>Item</strong></div>
 				<div style="flex:1"><strong>Price</strong></div>
 				<div style="flex:1"><strong>Quantity</strong></div>
@@ -39,9 +38,9 @@ r{% extends 'store/main.html' %}
 			{{items.quantity}}
 			{% for item in items %}
 			<div class="cart-row">
-				
+
 				<div style="flex:2">
-					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+					<div style="flex:2"><img class="row-image" src="/static/{{item.product.imageURL}}"></div>
 				</div>
 				<div style="flex:1">
 					<p>${{item.product.price|floatformat:2}}</p>
