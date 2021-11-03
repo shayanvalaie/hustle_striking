@@ -7,7 +7,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hustle | Striking</title>
+  <title>Hustle Striking | Official Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,9 +19,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Orbitron&family=Spartan:wght@300&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Roboto:wght@100&display=swap"
     rel="stylesheet">
-
 
 
   <script type="text/javascript">
@@ -76,8 +81,8 @@
 </head>
 
 <body>
-  <nav class="navbar nav-border navbar-expand-lg navbar-dark bg-dark">
-    <a class="" href="{% url 'home' %}"><img id="logo" src="{% static 'images/hs_logo.png' %}"></a>
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+    <a class="no-hover" href="{% url 'home' %}"><img id="logo" src="{% static 'images/hs_logo.png' %}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -90,25 +95,23 @@
 
 
         <li class="nav-item active">
-          <a class="nav-link ml-md link-flash" href="{% url 'schedule' %}"> Schedule <span
-              class="sr-only">(current)</span></a>
+          <a class="nav-link ml-md" href="{% url 'schedule' %}"> Schedule <span class="sr-only">(current)</span></a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link ml-md link-flash" href="{% url 'store' %}">Membership Options <span
+          <a class="nav-link ml-md" href="{% url 'store' %}">Membership Options <span
               class="sr-only">(current)</span></a>
         </li>
 
 
         <li class="nav-item active">
-          <a class="nav-link ml-md link-flash" href="{% url 'location' %}">Contact Us<span
-              class="sr-only">(current)</span></a>
+          <a class="nav-link ml-md" href="{% url 'location' %}">Contact<span class="sr-only">(current)</span></a>
         </li>
 
 
-        <div class="dropdown dropdown1">
+        <!-- <div class="dropdown dropdown1">
           <li class="nav-item active">
-            <a class="nav-link ml-md link-flash" href="#">Social Media <span class="sr-only">(current)</span></a>
+            <a class="nav-link ml-md" href="#">Social Media <span class="sr-only">(current)</span></a>
           </li>
           <div class="dropdown-content">
             <a target="_blank" class="dropdown" href="https://www.instagram.com/hustlestriking/">Instagram</a>
@@ -116,7 +119,7 @@
             <a target="_blank" href="https://www.youtube.com/channel/UC0NdE4rHN65QUTN5FeJQSmg">YouTube</a>
 
           </div>
-        </div>
+        </div> -->
 
 
 
@@ -140,6 +143,9 @@
 
 
   {% block content %} {% endblock content %}</div>
+
+
+
 
 
 

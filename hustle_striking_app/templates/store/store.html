@@ -5,8 +5,9 @@
 	{% for product in products %}
 	<div class="col-lg-4 p-5">
 
-		<div class="box-element text-center product">
+		<!-- <div class="box-element text-center product">
 			<img style="width:200px;" class="thumbnail" src="/static/{{product.imageURL}}">
+
 
 			<hr>
 
@@ -16,6 +17,17 @@
 			<button data-product={{product.id}} data-action="add" class="btn btn-outline-danger add-btn update-cart">Add
 				to Cart</button>
 
+		</div> -->
+
+		<div class="card1" href="#">
+			<img class="thumbnail" src="/static/{{product.imageURL}}">
+			<p class="small text-center mt-5"><strong>${{product.price|floatformat:2}} MONTHLY</strong></p>
+			<div class="go-corner" href="#">
+				<div class="go-arrow">
+					<button data-product={{product.id}} data-action="add" class="btn text-light add-btn update-cart">+
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	{% endfor %}
