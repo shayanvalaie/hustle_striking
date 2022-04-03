@@ -2,8 +2,261 @@
 {% load static %}
 {% block content %}
 
-<div class="p-5">
-    <img class="schedule" src="{% static 'images/hs_schedule.jpg' %}">
+<div class="mt-3">
+  <div class="text-center">
+    <hr class="mt-3" style="color:grey">
+
+
+    <h1 style="letter-spacing: .4rem;" class="text-light mt-1 font-weight-bold">Class Schedule</h1>
+    <hr class="mt-3" style="color:grey">
+  </div>
+
+
+  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+    <div class="cd-schedule__timeline">
+      <ul style="color: white">
+        <li><span>8:00am</span></li>
+        <li><span>8:30am</span></li>
+        <li><span>9:00am</span></li>
+        <li><span>9:30am</span></li>
+        <li><span>10:00am</span></li>
+        <li><span>10:30am</span></li>
+        <li><span>11:00am</span></li>
+        <li><span>11:30am</span></li>
+        <li><span>12:00pm</span></li>
+        <li><span>12:30pm</span></li>
+        <li><span>13:00pm</span></li>
+        <li><span>13:30pm</span></li>
+        <li><span>14:00pm</span></li>
+        <li><span>14:30pm</span></li>
+        <li><span>15:00pm</span></li>
+        <li><span>15:30pm</span></li>
+        <li><span>16:00pm</span></li>
+        <li><span>16:30pm</span></li>
+        <li><span>17:00pm</span></li>
+        <li><span>17:30pm</span></li>
+        <li><span>18:00pm</span></li>
+        <li><span>18:30pm</span></li>
+        <li><span>19:00pm</span></li>
+        <li><span>19:30pm</span></li>
+        <li><span>20:00pm</span></li>
+        <li><span>20:30</span></li>
+      </ul>
+    </div> <!-- .cd-schedule__timeline -->
+
+    <div class="cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="8:15" data-end="9:15" data-content="event-adults" data-event="event-1" href=" #0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+
+
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="16:45" data-content="event-juniors" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Juniors </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="17:45" data-content="event-teens" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Teens </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="18:00" data-end="19:00" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="19:15" data-end="20:15" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="8:15" data-end="9:15" data-content="event-adults" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+
+
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="16:45" data-content="event-teens" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Teens </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="17:45" data-content="event-juniors" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Juniors </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="18:00" data-end="19:00" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults/Teens Boxing</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="19:15" data-end="20:15" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="8:15" data-end="9:15" data-content="event-adults" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+
+
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="16:45" data-content="event-juniors" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Juniors </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="17:45" data-content="event-juniors" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Teens </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="18:00" data-end="19:00" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="19:15" data-end="20:15" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="8:15" data-end="9:15" data-content="event-adults" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+
+
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="16:45" data-content="event-teens" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Teens </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="17:45" data-content="event-juniors" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Juniors </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="18:00" data-end="19:00" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults/Teens Boxing</em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="19:15" data-end="20:15" data-content="event-adults" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Adults Fitness and Boxing</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="8:15" data-end="9:15" data-content="event-adults" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Private Lessons</em>
+              </a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Saturday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-content="event-adults" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Sparring (Members Only)</em>
+
+              </a>
+
+            </li>
+
+
+          </ul>
+        </li>
+    </div>
+
+
+    <div class="cd-schedule-modal">
+      <header class="cd-schedule-modal__header">
+
+      </header>
+
+      <div class="cd-schedule-modal__body">
+        <div class="cd-schedule-modal__event-info">
+
+
+        </div>
+        <div class="cd-schedule-modal__body-bg"></div>
+      </div>
+
+      <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+    </div>
+
+    <div class="cd-schedule__cover-layer"></div>
+  </div> <!-- .cd-schedule -->
+  <footer class="text-center">
+    <p style="font-size:.8rem; color:#676D79"> Hustle Striking | 2022</p>
+  </footer>
+
+
+
 </div>
+
+<script type="text/javascript" src="{% static 'js/util.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+
 
 {% endblock content %}

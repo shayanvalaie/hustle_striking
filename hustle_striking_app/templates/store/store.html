@@ -1,36 +1,38 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
-<div class="row">
-	{% for product in products %}
-	<div class="col-lg-4 p-5">
-
-		<!-- <div class="box-element text-center product">
-			<img style="width:200px;" class="thumbnail" src="/static/{{product.imageURL}}">
-
-
-			<hr>
+<div class="text-center">
+	<div class="row">
+		<hr class="mt-3" style="color:grey">
+		<h1 style="letter-spacing: .4rem;" class="text-light mt-1 font-weight-bold">Membership Options</h1>
+		<hr class="mt-2" style="color:grey">
+		{% for product in products %}
+		<div class=" col-lg-4 col-md-6 col-sm-6 p-5">
 
 
 
-			<h4 class="float-r"><strong>${{product.price|floatformat:2}}</strong></h4>
-			<button data-product={{product.id}} data-action="add" class="btn btn-outline-danger add-btn update-cart">Add
-				to Cart</button>
-
-		</div> -->
-
-		<div class="card1" href="#">
-			<img class="thumbnail" src="/static/{{product.imageURL}}">
-			<p class="small text-center mt-5"><strong>${{product.price|floatformat:2}} MONTHLY</strong></p>
-			<div class="go-corner" href="#">
-				<div class="go-arrow">
-					<button data-product={{product.id}} data-action="add" class="btn text-light add-btn update-cart">+
-					</button>
+			<div class="card1" href="#">
+				<img class="thumbnail" src="/static/{{product.imageURL}}">
+				<p class="small text-center mt-5"><strong>${{product.price|floatformat:2}} MONTHLY</strong></p>
+				<div class="go-corner" href="#">
+					<div class="go-arrow">
+						<button data-product={{product.id}} data-action="add"
+							class="btn text-light add-btn update-cart">+
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
-</div>
 
+
+
+	<footer class="text-center">
+		<p style="font-size:.8rem; color:#676D79"> Hustle Striking | 2022</p>
+	</footer>
+
+
+
+</div>
 {% endblock content %}
